@@ -39,7 +39,7 @@ nav {
 }
 
 header {
-    padding: 40px;
+    padding: 40px 20px;
     text-align: center;
     background-color: #1a1a1a;
     border-bottom: 4px solid #ff6600;
@@ -81,7 +81,7 @@ header {
 
 .project-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
     justify-items: center;
 }
@@ -91,7 +91,8 @@ header {
     padding: 20px;
     border-radius: 10px;
     transition: transform 0.3s ease;
-    width: 500px;
+    width: 100%; /* Adjusts to full width on smaller screens */
+    max-width: 500px; /* Limits the maximum width on larger screens */
 }
 
 .project-card:hover {
@@ -99,12 +100,13 @@ header {
 }
 
 .project-card img {
-    width: 500px;
-    height: 300px;
+    width: 100%;
+    height: auto;
     border-radius: 10px;
 }
-.project-card a{
-    color:white;
+
+.project-card a {
+    color: white;
     margin-top: 10px;
 }
 
@@ -132,6 +134,7 @@ footer {
     width: 100%;
     bottom: 0;
 }
+
 .skills {
     margin: 30px 0;
 }
@@ -155,12 +158,7 @@ footer {
 .skill-level {
     height: 20px;
     background-color: #ff6600;
-    width: 80%; /* Adjust this percentage to reflect the skill level */
     transition: width 0.5s ease-in-out;
-}
-
-.skill-level:hover {
-    width: 100%; /* Optional: Expands the bar to full width on hover */
 }
 
 .skill-level-mongo {
@@ -177,4 +175,57 @@ footer {
 
 .skill-level-node {
     width: 80%;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    header {
+        padding: 20px 10px;
+    }
+
+    .profile-image {
+        width: 120px;
+        height: 120px;
+    }
+
+    .about, .projects, .contact {
+        margin: 30px 10px;
+    }
+
+    .project-card {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-links {
+        gap: 5px;
+    }
+
+    .profile-image {
+        width: 100px;
+        height: 100px;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    .skills p {
+        font-size: 16px;
+    }
+
+    .project-card {
+        padding: 15px;
+    }
 }
