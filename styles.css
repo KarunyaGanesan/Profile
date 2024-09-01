@@ -180,11 +180,11 @@ footer {
 /* Media Queries for Responsive Design */
 @media (max-width: 768px) {
     .nav-container {
-        flex-direction: column;
+        flex-direction: row;
     }
 
     .nav-links {
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
         gap: 10px;
     }
