@@ -5,9 +5,13 @@ This is my personal Portfolio Website, showcasing my projects, skills, and profe
 Features
 
 Responsive Design: Fully optimized for different screen sizes and devices.
+
 Navigation Bar: Smooth navigation with sections like Home, About, Projects, and Contact.
+
 Project Showcase: Highlights my key projects, including GreenDen, Udemy Clone, Nostra, and TripAdvisor.
+
 Skill Ratings: Visual representation of my skills in MERN stack and other technologies.
+
 Contact Section: Easily accessible contact form and links to social media (Instagram and LinkedIn).
 
 Technologies Used
